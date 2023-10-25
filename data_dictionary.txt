@@ -1,0 +1,229 @@
+Football (Soccer) Analytics Project Data Dictionary
+
+# ---------------------------------------------------------
+# all_goalkeepers.csv
+# 
+# This dataset has all goalkeeper data from every season of MLS through 2020
+# ---------------------------------------------------------
+
+
+Player = Name of the MLS football player
+
+Club = 3 - 4 letter abbreviation for the MLS team (football club)
+
+POS = Player's position, which should be 'GK' for goalkeepers
+
+GP = Number of games played
+
+GS = Number of games started
+
+MINS = Total minutes played
+
+SHTS = Total number of shots faced by the goalkeeper
+
+SV = Number of shots saved
+
+GA = Number of goals allowed by the goalkeeper
+
+GAA = Goals Against Average, calculated as GA / (MINS / 90), where 90 represents the standard match duration in minutes
+
+PKG/A = Number of penalty kicks saved out of the total penalty kicks faced
+
+W = Number of games won by the goalkeeper's team while the goalkeeper was playing
+
+L = Number of games lost by the goalkeeper's team while the goalkeeper was playing
+
+T = Number of games tied (drawn) by the goalkeeper's team while the goalkeeper was playing
+
+ShO = Number of shutouts (games in which the goalkeeper and their team did not allow any goals) achieved by the goalkeeper
+
+W% = Winning percentage of the goalkeeper, calculated as (W / GP) * 100
+
+Sv% = Save percentage of the goalkeeper, calculated as (SV / SHTS) * 100
+
+Year = Year in which the statistics were recorded
+
+Season = Were these stats recorded during regular or post-season play (i.e. "reg", "post")?
+
+
+# ---------------------------------------------------------
+# all_players.csv
+#
+# This dataset has all outfield player data from every season of MLS through 2020
+# ---------------------------------------------------------
+
+
+Player: Name of the MLS football player
+
+Club: 3 - 4 letter abbreviation for the MLS team (football club)
+
+POS: Player's position on the field (e.g., forward, midfielder, defender)
+
+GP: Number of games played
+
+GS: Number of games started
+
+MINS: Total minutes played 
+
+G: Total number of goals scored
+
+A: Total number of assists made 
+
+SHTS: Total number of shots taken 
+
+SOG: Total number of shots on goal made 
+
+GWG: Number of game-winning goals scored
+
+PKG/A: Number of penalty kicks goals scored out of the total penalty kicks attempted
+
+HmG: Number of goals scored in home matches
+
+RdG: Number of goals scored in away matches
+
+G/90min: Goals per 90 minutes, calculated as (G / MINS) * 90
+
+SC%: Shooting percentage, calculated as (G / SHTS) * 100
+
+GWA: Number of game-winning assists made
+
+HmA: Number of assists made in home matches
+
+RdA: Number of assists made in away matches
+
+A/90min: Assists per 90 minutes, calculated as (A / MINS) * 90
+
+FC: Total number of fouls committed
+
+FS: Total number of fouls suffered
+
+OFF: Total number of offside offenses committed
+
+YC: Total number of yellow cards received
+
+RC: Total number of red cards received
+
+SOG%: Percentage of shots on goal out of total shots attempted, calculated as (SOG / SHTS) * 100
+
+Year: Year in which the statistics were recorded
+
+Season = Were these stats recorded during regular or post-season play (i.e. "reg", "post")?
+
+
+# ---------------------------------------------------------
+# all_tables.csv
+#
+# This dataset has end of season / current standing of tables for every season through 2021
+# ---------------------------------------------------------
+
+
+Pos: Position or rank of the team in the standings
+
+Team: Name of the MLS team (not abbreviations)
+
+GP: Total number of games played by the team in that season
+
+W: Number of games won
+
+L: Number of games lost 
+
+SW: Number of games won in shootouts (if applicable)
+
+GF: Total number of goals scored
+
+GA: Total number of goals conceded 
+
+GD: Goal difference, calculated as GF - GA
+
+Pts: Ttotal number of points earned; typically awarded for wins and draws (e.g., 3 points for a win, 1 point for a draw)
+
+Qualification: Qualification status or achievement of the team (e.g., playoffs, championship)
+
+Conference: Conference or division to which the team belongs (e.g., Eastern Conference, Western Conference)
+
+Year: Year for which the standings are recorded
+
+SL: Streak Length, indicating the length of the team's current winning or losing streak
+
+D: Number of games the team drew during the season
+
+Head-to-head: Head-to-head record, which may include information on how the team performed against specific opponents
+
+PPG: Points Per Game, calculated as Pts / GP; represents average number of points earned by the team per game
+
+# ---------------------------------------------------------
+# events.csv
+#
+# This dataset has events from games from the 2008-2021 seasons
+# ---------------------------------------------------------
+
+
+id: Unique dentifier for each event assigned to each event for reference purposes
+
+time: Timestamp at which the event occurred during the game; format of minutes and seconds (e.g., "45'+2'" for the second minute of injury time in the first half)
+
+event: Description or code representing the specific event that occurred during the game (e.g. "Will Hesmer makes an outstanding save (Parry)"). The "event" column may contain various types of events, including but not limited to:
+	- Goals: Indicating when a goal was scored, and potentially the player who scored it.
+	- Assists: If an assist is recorded for a goal, it may be indicated in this column.
+	- Yellow Cards: When a player receives a yellow card for a caution.
+	- Red Cards: When a player is sent off with a red card.
+	- Substitutions: When a player is substituted in or out of the game.
+	- Fouls: Records of fouls committed by players.
+	- Corners: When a corner kick is awarded to a team.
+	- Penalties: Indicating the awarding of a penalty kick.
+	- Throw-ins: Records of throw-ins during the game.
+	- Other Events: Any other notable events or incidents that occurred during the game.
+
+
+# ---------------------------------------------------------
+# matches.csv (used in project)
+#
+# This dataset has game match data from the 2001-2021 seasons
+# ---------------------------------------------------------
+
+
+'id', 'home', 'away', 'date', 'year', 'part_of_competition', 'game_status', 'home_score', 'away_score'
+id: Unique identifier for each match assigned to each game for reference purposes
+
+home: Name of the home team, representing the team that played the game on their home field
+
+away: Name of the away team, representing the opposing team
+
+date: Date when the match took place, formated :????
+
+year: Year in which the match occurred
+
+time (utc): Timestamp in Coordinated Universal Time (UTC) when the match started
+
+attendance: Number of spectators or fans in attendance at the match
+
+venue: Name or location of the stadium or venue where the match was played
+
+part_of_competition: Specific competition or tournament of which the match is a part (e.g., regular season, playoffs, cup competition)
+
+game_status: Status of the game (e.g., "Final," "Postponed," "Abandoned")
+
+shootout: Indicates whether a shootout occurred (e.g., "Yes" or "No")
+
+home_score: Total number of goals scored by the home team
+
+away_score: Total number of goals scored by the away team in the match
+
+referee: Name of the referee officiating the match
+
+home_goal_minutes: List of minutes when home team goals were scored
+
+home_goal_scorers: List of players who scored goals for the home team, typically associated with the corresponding minutes
+
+away_goal_minutes: List of minutes when away team goals were scored 
+
+away_goal_scorers: List of players who scored goals for the away team, typically associated with the corresponding minutes
+
+
+# ---------------------------------------------------------
+# awards.csv
+# 
+# This dataset has trophies and awards data for each player in a given year
+# ---------------------------------------------------------
+
+              
