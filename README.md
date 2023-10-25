@@ -50,5 +50,3 @@ The main objective of your project is to predict and categorize MLS players base
 11. **Future Considerations:**
     - Consider expanding the project by incorporating additional data sources or including more seasons for a more comprehensive analysis.
     - Explore advanced machine learning techniques or deep learning models for improved accuracy.
-
-By breaking down the project into these steps, you can systematically work on your first soccer player performance analysis project for MLS. This project will not only showcase your data science skills but also your ability to apply them to the world of soccer analytics.
