@@ -223,7 +223,57 @@ away_goal_scorers: List of players who scored goals for the away team, typically
 # ---------------------------------------------------------
 # awards.csv
 # 
-# This dataset has trophies and awards data for each player in a given year
+# This dataset has trophies and awards data for players who received an award in a given year
 # ---------------------------------------------------------
 
-              
+Year: The year in which the awards were given
+
+Player: The name of the player who received the award
+
+Nation: The nationality of the player
+
+Team: The team (aka club) to which the player belongs 
+
+ESPY Winner: Whether the player was an ESPY award winner (yes or no)
+
+ESPY Finalist: Whether the player was an ESPY award finalist (yes or no) - includes ESPY award winner
+
+Best XI: Whether the player was selected for the Best XI team (yes or no)
+
+Comeback Player of the Year Winner: Whether the player won the Comeback Player of the Year award (yes or no)
+
+Defender Award Other Finalists: Other finalists for the Defender of the Year award
+
+Defender of the Year Winner: Whether the player won the Defender of the Year award (yes or no)
+
+GK of the Year Rank: The ranking of the finalist for the Goalkeeper of the Year award
+
+GK of the Year Finalist: Whether the player was a finalist for the Goalkeeper of the Year award (yes or no) - includes GK award winner
+
+Goal of the Year: Whether the player received the Goal of the Year award (yes or no)
+
+Golden Boot: Whether the player received the Golden Boot award (yes or no)
+
+No of Months: The total number of months the player received Player of the Month awards in a given year
+
+Player of the Month: Whether the player received the Player of the Month award in a given year (yes or no)
+
+Landon Donovan MVP Winner: Whether the player won the Landon Donovan MVP award (yes or no)
+
+Landon Donovan MVP Finalist: Whether the player was a finalist for the Landon Donovan MVP award (yes or no) - includes Winner
+
+All-Star Game MVP: Whether the player received the All-Star Game MVP award (yes or no) - excludes non-MLS players
+
+Newcomer of the Year: Whether the player was named Newcomer of the Year (yes or no)
+
+Position: The playing position of the player
+
+Draft Pick: The player's draft pick
+
+Draft Class: The class of the player's draft
+
+College: The college attended by the player
+
+Age: The age of the player at the time of receiving the award
+
+Young Player of the Year: Whether the player received the Young Player of the Year award (yes or no); fka Rookie of the Year Award from 1996-2019 and now is awarded to a U22 player
